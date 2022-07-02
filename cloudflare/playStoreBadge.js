@@ -47,7 +47,7 @@ async function handleRequest (request) {
   const init = {
     headers: {
       'content-type': 'application/json;charset=UTF-8',
-      'source-code': 'github.com/cvzi/playshields/'
+      'source-code': 'gist.github.com/cvzi/e5d10613e50d2c4283c97fa1a861933e'
     }
   }
   const { pathname } = new URL(request.url)
