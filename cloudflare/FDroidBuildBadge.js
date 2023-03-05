@@ -42,7 +42,7 @@ async function cachedFetchJSON (url, fetchConfig, event) {
 }
 
 function findBuild (data, packageName) {
-  if ('failedBuilds' in data && data.failedBuilds.some(v => v[0] === packageName)) {
+  if ('failedBuilds' in data && packageName in data.failedBuilds) {
     return -1
   }
   return 'successfulBuilds' in data && data.successfulBuilds.filter(v => v.id === packageName)
